@@ -13,10 +13,31 @@ class Dealership
   end
 
   def inventory_count
-    @inventory.length
+    @inventory_count
   end
 
   def add_car(car)
+    @inventory_count += 1
     @inventory << car
+  end
+
+  def has_inventory?
+    if @inventory_count >= 1
+     return true
+    else 
+      false
+    end
+  end
+
+  def cars_by_make(make)
+    @inventory.select{|make| make == @car.make}
+  end
+
+  def total_value
+    
+  end
+
+  def details
+
   end
 end
