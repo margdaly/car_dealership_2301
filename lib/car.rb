@@ -17,4 +17,16 @@ class Car
   def model
     model = @make_model.split(' ').last
   end
+
+  def monthly_payment
+    @monthly_payment
+  end
+
+  def loan_length
+    @loan_length
+  end
+
+  def total_cost
+    @loan_length * @monthly_payment
+  end
 end
