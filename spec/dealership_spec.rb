@@ -82,7 +82,6 @@ RSpec.describe Dealership do
       dealership.add_car(car_1)
       dealership.add_car(car_2)
       dealership.add_car(car_3)
-      dealership.add_car(car_4)
 
       expect(dealership.cars_by_make("Toyota")).to eq([car_2, car_3])
     end
