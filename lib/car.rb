@@ -6,6 +6,7 @@ class Car
   @monthly_payment = monthly_payment
   @loan_length = loan_length
   @color = color
+  @total_cost = total_cost
   end
 
   def make_model
@@ -40,3 +41,4 @@ class Car
     @color = new_color
   end
 end
+
