@@ -30,14 +30,24 @@ class Dealership
   end
 
   def cars_by_make(make)
-    @inventory.select{|make| make == @car.make}
+    cars_by_make = []
+    @inventory.map do |car|
+      if car.make == make
+        cars_by_make << car
+      end
+    end
+    cars_by_make
   end
 
   def total_value
-    
+   @total_value = @inventory.inject(0) {|sum, car| sum + car.total_cost}
   end
 
   def details
+    details = {
+      "total_value"=>@total_value,
+      "address"=>@address
+    }
 
   end
 end
