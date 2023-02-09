@@ -1,11 +1,12 @@
 class Dealership
-  attr_accessor :inventory, :inventory_count
+  attr_accessor :inventory, :inventory_count, :total_value
 
   def initialize(name, address)
     @name = name
     @address = address
     @inventory = []
     @inventory_count = 0
+    @total_value = total_value
   end
 
   def inventory
@@ -48,6 +49,5 @@ class Dealership
       "total_value"=>@total_value,
       "address"=>@address
     }
-
   end
 end
